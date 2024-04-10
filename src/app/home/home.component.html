@@ -1,48 +1,21 @@
 <div class="row ">
 
-  <div class="col-md-4  box-shadow ">
+  <div *ngFor="let category of homeCategories" class="col-md-4  box-shadow ">
 
     <div class="p-3 card border bg-light">
 
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Computers</h4>
+        <h4 class="my-0 font-weight-normal">{{ category.cardName }}</h4>
       </div>
 
       <div class="card-body">
-        <img class="img-fluid mb-4" src="img/laptops.png">
+        <img class="img-fluid mb-4" [src]="category.image">
         <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-          onclick="window.location.href='product-categories.html'">View</button>
+          (click)="toCategoriesPage()">View</button>
       </div>
 
     </div>
 
   </div>
-
-  <div class="col-md-4  box-shadow ">
-    <div class="p-3 card border bg-light">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">TVs</h4>
-      </div>
-      <div class="card-body">
-        <img class="img-fluid mb-4" src="img/tvs.png">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-          onclick="window.location.href='product-categories.html'">View</button>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-md-4  box-shadow ">
-    <div class="p-3 card border bg-light">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Appliances</h4>
-      </div>
-      <div class="card-body">
-        <img class="img-fluid mb-4" src="img/appliances.png">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-          onclick="window.location.href='product-categories.html'">View</button>
-      </div>
-    </div>
-  </div>
-
+  
 </div>

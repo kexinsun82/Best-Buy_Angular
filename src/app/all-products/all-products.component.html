@@ -1,41 +1,3 @@
-<div class="row">
-  <div class="col-md-12">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Best Buy</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="all-products.html">All Products</a>
-            </li>
-            <li class="nav-item">
-
-              <select class="form-select" onchange="if (this.value) window.location.href=this.value">
-                <option>Select a Category...</option>
-                <option value="product-categories.html">Tvs</option>
-                <option value="product-categories.html">Computers</option>
-                <option value="product-categories.html">Appliances</option>
-              </select>
-
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </nav>
-  </div>
-
-</div>
-
-
 <div class="container-lg px-4" style="margin-top:100px;">
   <div class="row ">
 
@@ -47,7 +9,7 @@
         <div class="card-body">
           <img class="img-fluid mb-4" src="img/stove.jpeg">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-            onclick="window.location.href='interior-product.html'">View</button>
+          (click)="toInteriorPage()">View</button>
           <ul class="list-unstyled mt-3 mb-4">
             <li>$399</li>
           </ul>
@@ -64,7 +26,7 @@
         <div class="card-body">
           <img class="img-fluid mb-4" src="img/fridge.jpeg">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-            onclick="window.location.href='interior-product.html'">View</button>
+          (click)="toInteriorPage()">View</button>
           <ul class="list-unstyled mt-3 mb-4">
             <li>$399</li>
           </ul>
@@ -81,7 +43,7 @@
         <div class="card-body">
           <img class="img-fluid mb-4" src="img/macbook.jpeg">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-            onclick="window.location.href='interior-product.html'">View</button>
+          (click)="toInteriorPage()">View</button>
           <ul class="list-unstyled mt-3 mb-4">
             <li>$399</li>
           </ul>
@@ -98,7 +60,7 @@
         <div class="card-body">
           <img class="img-fluid mb-4" src="img/tablet.jpeg">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-            onclick="window.location.href='interior-product.html'">View</button>
+          (click)="toInteriorPage()">View</button>
           <ul class="list-unstyled mt-3 mb-4">
             <li>$399</li>
           </ul>
