@@ -1,24 +1,24 @@
 <div class="container-lg px-4" style="margin-top:100px;">
   <div class="row ">
 
-    <div class="col-md-3  box-shadow ">
+    <div *ngFor="let product of products" class="col-md-3  box-shadow ">
       <div class="p-3 card border bg-light">
         <div class="card-header">
-          <h6 class="my-0 font-weight-normal">Bosch 30" 3.7 Cu. Ft. True Convection 5-Burner Stove</h6>
+          <h6 class="my-0 font-weight-normal">{{ product.name }}</h6>
         </div>
         <div class="card-body">
-          <img class="img-fluid mb-4" src="img/stove.jpeg">
+          <img class="img-fluid mb-4" [src]="product.photo">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
           (click)="toInteriorPage()">View</button>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>$399</li>
+            <li>${{ product.price }}</li>
           </ul>
         </div>
       </div>
     </div>
 
 
-    <div class="col-md-3  box-shadow ">
+    <!-- <div class="col-md-3  box-shadow ">
       <div class="p-3 card border bg-light">
         <div class="card-header">
           <h6 class="my-0 font-weight-normal">Bosch 36" 21 Cu. Ft. Counter-Depth 4-Door French Door Refrigerator</h6>
@@ -100,7 +100,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </div>

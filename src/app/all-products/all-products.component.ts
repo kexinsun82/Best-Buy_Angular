@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class AllProductsComponent implements OnInit {
  
-  public servers: {id: number, name: string, description: string, price: number, category: string, photo: string}[] = [];
+  products: any[] = [];
 
   constructor(private serversService: ServersService, private router: Router) { }
 
   ngOnInit() {
-
+    this.products = this.serversService.getServers();
   }
 
   toInteriorPage() {
