@@ -43,7 +43,8 @@ export class ServersService {
     },
     {
       id: 6,
-      name: "Dive into 4K Ultra HD cinematic entertainment with the Amazon Fire TV Stick 4K Max Media Streamer. Equipped with a quad-core 1.8 GHz processor, Wi-Fi 6 support, and Alexa Voice Remote, this powerful streaming stcik delivers faster app starts and more fluid navigation. Enjoy vivid, lifelike colours with support for Dolby Vision, HDR 10, HDR10+, and the immersive audio of Dolby Atmos.",
+      name: 'Amazon Fire TV Stick 4K Max Media Streamer with Alexa Voice Remote',
+      description: "Dive into 4K Ultra HD cinematic entertainment with the Amazon Fire TV Stick 4K Max Media Streamer. Equipped with a quad-core 1.8 GHz processor, Wi-Fi 6 support, and Alexa Voice Remote, this powerful streaming stcik delivers faster app starts and more fluid navigation. Enjoy vivid, lifelike colours with support for Dolby Vision, HDR 10, HDR10+, and the immersive audio of Dolby Atmos.",
       price: 59.99,
       category: "TVs",
       photo: "../../assets/images/firestick.jpeg"
@@ -53,6 +54,25 @@ export class ServersService {
   getServers() {
     return this.servers;
   }
+
+  getServersByCategory(category: string) {
+    return this.servers.filter(server => server.category === category);
+  }
+
+  // getServersByCategory(category: string) {
+  //   const server = this.servers.find(
+  //     (s) => {
+  //       return s.category === category;
+  //     }
+  //   );
+  //   return server;
+  // }
+
+  filterServer(category:string) {
+    let filterServer = this.servers.filter(s => s.category === category);
+    return filterServer;
+  }
+  
 
 
 

@@ -31,8 +31,8 @@ export class HomeComponent implements OnInit {
     }
   ]
 
-  toCategoriesPage() {
-    this.router.navigate(['categories']);
+  toCategoriesPage(categoryName: string) {
+    this.router.navigate(['/categories', categoryName]);
   }
  
 

@@ -1,40 +1,24 @@
 <div class="container-lg px-4" style="margin-top:100px;">
   <div class="row">
     <div class="col-md-12">
-      <h1>TVs</h1>
+      <h1>{{ items[0]?.category }}</h1>
     </div>
   </div>
   <div class="row ">
 
-    <div class="col-md-4  box-shadow ">
+    <div *ngFor="let item of items" class="col-md-4  box-shadow ">
       <div class="p-3 card border bg-light">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal">Amazon Fire TV Stick 4K Max Media Streamer with Alexa Voice Remote</h4>
+          <h4 class="my-0 font-weight-normal">{{ item.name }}</h4>
         </div>
         <div class="card-body">
-          <img class="img-fluid mb-4" src="img/firestick.jpeg">
+          <img class="img-fluid mb-4" [src]="item.photo">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
           (click)="toInteriorPage()">View</button>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4  box-shadow ">
-      <div class="p-3 card border bg-light">
-        <div class="card-header">
-          <h4 class="my-0 font-weight-normal">LG 50" 4K UHD HDR LED webOS Smart TV</h4>
-        </div>
-        <div class="card-body">
-          <img class="img-fluid mb-4" src="img/lgtv.jpeg">
-          <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-            (click)="toInteriorPage()">View</button>
-        </div>
-      </div>
-    </div>
-    <router-outlet></router-outlet>
-
-
-
+    <!-- <router-outlet></router-outlet> -->
 
   </div>
 </div>

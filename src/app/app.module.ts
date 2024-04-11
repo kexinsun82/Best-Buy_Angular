@@ -22,6 +22,9 @@ const appRoutes: Routes = [
     path: 'categories', component: CategoriesComponent
   },
   {
+    path: 'categories/:category', component: CategoriesComponent
+  },
+  {
     path: 'interiorProduct', component: InteriorProductComponent
   }
 ];
