@@ -9,7 +9,7 @@
         <div class="card-body">
           <img class="img-fluid mb-4" [src]="product.photo">
           <button type="button" class="btn btn-lg btn-block btn-outline-primary"
-          (click)="toInteriorPage()">View</button>
+          [routerLink]="['/product', product.id]">View</button>
           <ul class="list-unstyled mt-3 mb-4">
             <li>${{ product.price }}</li>
           </ul>

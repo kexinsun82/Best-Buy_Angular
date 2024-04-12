@@ -1,3 +1,9 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+
 export class ServersService {
 
   private servers = [
@@ -59,10 +65,14 @@ export class ServersService {
     return this.servers.filter(server => server.category === category);
   }
 
-  // filterServer(category:string) {
-  //   let filterServer = this.servers.filter(s => s.category === category);
-  //   return filterServer;
-  // }
+  getProductById(id: number) {
+    const server = this.servers.find(
+      (s) => {
+        return s.id === id;
+      }
+    );
+    return server;
+  }
   
 
 

@@ -17,9 +17,10 @@ export class AllProductsComponent implements OnInit {
     this.products = this.serversService.getServers();
   }
 
-  toInteriorPage() {
-    this.router.navigate(['interior-product']);
+  toInteriorPage(productId: number) {
+    this.router.navigate(['/product', productId]);
   }
+
 
 
 }

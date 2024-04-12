@@ -11,16 +11,14 @@ import { Router } from '@angular/router';
 })
 export class CategoriesComponent implements OnInit, OnDestroy {
 
-  items: any[] = [];
+  products: any[] = [];
   paramsSubscription: Subscription = new Subscription();
   constructor(private serversService: ServersService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    // console.log(this.serversService.filterServer('TVs'));
-
     this.paramsSubscription = this.route.params.subscribe
     ((params: Params) => {
-      this.items = this.serversService.getServersByCategory(params['category']);
+      this.products = this.serversService.getServersByCategory(params['category']);
 
     })
   }
@@ -30,8 +28,8 @@ export class CategoriesComponent implements OnInit, OnDestroy {
     this.paramsSubscription.unsubscribe();
   }
 
-  toInteriorPage() {
-        this.router.navigate(['interior-product']);
-      }
+  toInteriorPage(productId: number) {
+    this.router.navigate(['/product', productId]);
+  }
 
 }

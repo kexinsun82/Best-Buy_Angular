@@ -4,24 +4,17 @@
     <div class="col-md-12  box-shadow ">
       <div class="p-3 card border bg-light">
         <div class="card-header text-center">
-          <img class="img-fluid mb-4" src="img/fridge.jpeg">
-          <h4 class="my-0 font-weight-normal">Bosch 36" 21 Cu. Ft. Counter-Depth 4-Door French Door Refrigerator
-            (B36CL80SNS) - Stainless Steel</h4>
+          <img class="img-fluid mb-4" [src]="product.photo">
+          <h4 class="my-0 font-weight-normal">{{ product.name }}</h4>
         </div>
         <div class="card-body">
 
-
           <ul class="list-unstyled mt-3 mb-4">
-            <li>Keep your food fresh and close at hand with this 4-door Bosch refrigerator. The fridge's 21 cu ft.
-              capacity provides plenty of room for all your groceries, while the FarmFresh system keeps the contents
-              perfectly chilled. Its HomeConnect system connects to your home network for integration with Nest,
-              Alexa, Fitbit, and more. </li>
+            <li>{{ product.description }}</li>
             <li>
-              <h1 class="card-title pricing-card-title">$3000.00</h1>
+              <h1 class="card-title pricing-card-title">${{ product.price }}</h1>
             </li>
-
           </ul>
-
 
         </div>
       </div>
