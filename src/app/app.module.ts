@@ -26,7 +26,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'interiorProduct', component: InteriorProductComponent
-  }
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

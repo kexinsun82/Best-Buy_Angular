@@ -16,7 +16,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
   constructor(private serversService: ServersService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    console.log(this.serversService.filterServer('TVs'));
+    // console.log(this.serversService.filterServer('TVs'));
 
     this.paramsSubscription = this.route.params.subscribe
     ((params: Params) => {

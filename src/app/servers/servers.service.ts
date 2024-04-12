@@ -59,19 +59,10 @@ export class ServersService {
     return this.servers.filter(server => server.category === category);
   }
 
-  // getServersByCategory(category: string) {
-  //   const server = this.servers.find(
-  //     (s) => {
-  //       return s.category === category;
-  //     }
-  //   );
-  //   return server;
+  // filterServer(category:string) {
+  //   let filterServer = this.servers.filter(s => s.category === category);
+  //   return filterServer;
   // }
-
-  filterServer(category:string) {
-    let filterServer = this.servers.filter(s => s.category === category);
-    return filterServer;
-  }
   
 
 

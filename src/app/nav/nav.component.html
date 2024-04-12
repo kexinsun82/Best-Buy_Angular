@@ -17,17 +17,15 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="allProducts">All Products</a>
         </li>
-
+        
         <li class="nav-item">
-
-          <select class="form-select" #categorySelect (change)="onCategoryChange(categorySelect.value)">
+          <select class="form-select" #categorySelect (change)="toCategoriesPage(categorySelect.value)">
             <option>Select a Category...</option>
-            <option value="tvs">Tvs</option>
-            <option value="computers">Computers</option>
-            <option value="appliances">Appliances</option>
+            <option *ngFor="let homeCategory of homeCategories" [value]="homeCategory.cardName">{{ homeCategory.cardName }}</option>
           </select>
-
         </li>
+        
+        
       </ul>
 
     </div>
